@@ -1,0 +1,30 @@
+#!/bin/bash
+
+DEFAULT_PLAYER="spotify"
+
+on_next() {
+  playerctl next
+}
+
+on_prev() {
+  playerctl previous
+}
+
+on_play_pause() {
+  ps -e | grep "$DEFAULT_PLAYER"
+  response=$?
+  if [[ response -eq 0 ]]; then
+    playerctl play-pause
+  else
+    exec spotify &
+  fi 
+}
+
+if [[ "$1" == "--next" ]]; then
+  on_next
+elif [[ "$1" == "--prev" ]]; then
+  on_prev
+elif [[ "$1" == "--play-pause" ]]; then
+  on_play_pause
+fi
+

@@ -1,0 +1,9 @@
+#!/bin/bash
+#reset mako
+sleep 1
+pkill mako
+mako &
+
+#restart the waybar
+pkill waybar
+waybar &
