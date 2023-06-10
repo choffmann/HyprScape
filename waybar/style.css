@@ -85,8 +85,16 @@ tooltip label{
     border-radius: 10px 10px 10px 10px;
 }
 
-#custom-launch_wofi, #cpu, #pulseaudio, #custom-lock_screen {
+#custom-launch_wofi, #cpu, #custom-spotify, #custom-lock_screen {
     border-radius: 10px 0px 0px 10px;
+}
+
+#custom-spotify {
+    padding-right: 10px;
+}
+
+#custom-updates {
+    border-radius: 10px 10px 10px 10px;
 }
 
 #workspaces, #clock, #memory, #pulseaudio.microphone {

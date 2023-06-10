@@ -176,6 +176,7 @@
 
     "custom/spotify": {
         "format": " {}",
+        "output": "HDMI-A-1",
         "max-length": 40,
         "interval": 30,
         "exec": "~/.config/HyprScape/waybar/scripts/media/mediaplayer.sh",
